@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { useLocation, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/home';
+import About from './pages/about/about'
+import Contact from './pages/contact/contact'
+import { Navbar } from './components/navbar/navbar';
+import { AnimatePresence } from 'framer-motion';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route index element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </AnimatePresence>
+      <Toaster position='top-right' toastOptions={{
+        style: {
+          width:"250px",
+          height:'100px'
+        },
+      }} />
+    </>
   );
 }
 

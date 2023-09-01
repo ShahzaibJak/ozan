@@ -1,38 +1,278 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  font-family: "Roslindale Display Condensed";
+  background: #aecae0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar Styles */
+.nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo,
+.nav-item {
+  margin: 1.5em;
+  margin-bottom: 1em;
+}
+
+.nav-item a,
+.logo a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2vw;
+  color: white;
+}
+
+.logo a {
+  font-weight: bold;
+}
+
+/* Page Animation Styles */
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(45, 45, 45, 0.8), rgba(45, 45, 45, 0.4));
+  transform-origin: bottom;
+  background-position: center;
+  background-size: cover;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(45, 45, 45, 0.8), rgba(45, 45, 45, 0.4));
+  background-position: center;
+  background-size: cover;
+  transform-origin: top;
+}
+
+
+/* Home Page Styles */
+.home {
+  margin: 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-y: scroll;
+  background-image: linear-gradient(to bottom, rgba(45, 45, 45, 0.3), rgba(45, 45, 45, 0.6)), url('../public/images/ozan-bg-6.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.full-screen h1 {
+  font-weight: 500;
+  font-size: 10vw;
+  text-transform: uppercase;
+}
+
+.full-screen h2 {
+  font-weight: 400;
+  font-size: 6vw;
+}
+
+.full-screen{
+  margin-top: 30px;
   min-height: 100vh;
+  max-width: 100vw;
+  width:100vw;
+}
+.white{
+  color:white
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* About Page Styles */
+.about {
+  margin: 0;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(45, 45, 45, 0.3), rgba(45, 45, 45, 0.6)), url('../public/images/ozan-bg-5.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Contact Page Styles */
+.contact {
+  margin: 0;
+  width: 100vw;
+  max-width: 100vw;
+  background-image: linear-gradient(to bottom, rgba(45, 45, 45, 0.3), rgba(45, 45, 45, 0.6)), url('../public/images/ozan-bg-3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.contact-card {
+  width: 80%;
+  background: #ebebeb;
+  color: black;
+  border: 1px solid #bfbfbf;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  border-radius: 8px 8px;
+  padding: 50px;
+}
+
+.contact-info {
+  padding: 40px 20px;
+  background-color: #e5e5e5;
+  color: black !important;
+  flex-basis: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 25.5px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info p,
+b {
+  color: #0f0f0f;
+}
+
+.contact-card h1 {
+  color: black;
+  font-size: 3vw;
+  font-weight: 700;
+  text-transform: none;
+  text-align: center;
+}
+
+.contact-form {
+  padding: 40px 20px;
+  display: flex;
+  flex-basis: 60%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-item {
+  width: 100%;
+}
+
+.contact-item input,
+textarea {
+  width: 95% !important;
+  background-color: aliceblue;
+  border: 1px aliceblue;
+  padding: 20px 10px;
+  color: navy;
+  font-weight: 500;
+  border: 1px solid #afafaf;
+}
+
+.contact-item input[type="submit"] {
+  background-color: lightskyblue;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .contact-card {
+    width: 90%;
+    background: #ebebeb;
+    color: black;
+    border: 1px solid #bfbfbf;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    border-radius: 8px 8px;
+    padding: 30px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .contact-item input,
+  textarea {
+    width: 100% !important;
+    background-color: aliceblue;
+    border: 1px aliceblue;
+    padding: 20px 10px;
+    color: navy;
+    font-weight: 500;
+    border: 1px solid #afafaf;
+  }
+
+  .contact-form {
+    padding: 40px 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-info {
+    width: 100%;
   }
 }
