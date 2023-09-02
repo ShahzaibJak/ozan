@@ -1,8 +1,8 @@
 # React JS Real Estate Website
 
-This is a React JS Real Estate Website using custom CSS Styling and Components along with #[Framer Motion](https://www.framer.com/motion/).
+This is a React JS Real Estate Website using custom CSS Styling and Components along with [Framer Motion](https://www.framer.com/motion/).
 
-#[Live Demo](https://ozan.vercel.app/contact).
+[Live Demo](https://ozan.vercel.app/contact).
 
 # Getting Started with Create React App
 
